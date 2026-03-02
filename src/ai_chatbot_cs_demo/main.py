@@ -6,7 +6,7 @@ from .agent.controller import AgentController
 
 load_dotenv()
 
-BANNER = "Thoughtful AI Support  |  type 'quit' to exit"
+BANNER = "Thoughtful AI Support  |  type 'quit' to exit  |  ensure OPENAI_API_KEY is set for full functionality"
 DIVIDER = "-" * len(BANNER)
 
 

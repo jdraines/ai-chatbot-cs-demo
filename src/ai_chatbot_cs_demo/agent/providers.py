@@ -41,16 +41,22 @@ def _stub_messages() -> Iterator[AIMessage]:
 
 
 def get_similarity_threshold() -> float:
-    return 0.85 if os.getenv("OPENAI_API_KEY") else 0.60
+
+    if os.getenv("OPEN_API_KEY"):
+        if os.getenv("OPEN_API_KEY") != "your-api-key-here":
+            return 0.85
+    return 0.60
 
 
 def get_embedder() -> Embeddings:
     if os.getenv("OPENAI_API_KEY"):
-        return OpenAIEmbeddings(model="text-embedding-3-small")
+        if os.getenv("OPEN_API_KEY") != "your-api-key-here":
+            return OpenAIEmbeddings(model="text-embedding-3-small")
     return TfidfEmbeddings()
 
 
 def get_llm() -> BaseChatModel:
     if os.getenv("OPENAI_API_KEY"):
-        return ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
+        if os.getenv("OPEN_API_KEY") != "your-api-key-here":
+            return ChatOpenAI(model="gpt-4o-mini", temperature=0.7)
     return GenericFakeChatModel(messages=_stub_messages())

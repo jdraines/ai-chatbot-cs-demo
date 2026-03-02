@@ -17,7 +17,6 @@ tool was made, opinions, etc.
 | Variable               | Default         | Description                        |
 |------------------------|-----------------|------------------------------------|
 | `OPENAI_API_KEY`       | —               | Enables live embeddings and LLM    |
-| `SIMILARITY_THRESHOLD` | `0.85` / `0.60` | Match threshold (with/without key) |
 
 Without `OPENAI_API_KEY`, the agent uses TF-IDF embeddings and a stub LLM.
 
