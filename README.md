@@ -24,7 +24,7 @@ Without `OPENAI_API_KEY`, the agent uses TF-IDF embeddings and a stub LLM.
 ## Developer Notes
 
 This chatbot was made in response to a technical screening question on a job interview.
-(I assume if you're reading this, I'm being screend?) The screen didn't say anything about
+(I assume if you're reading this, I'm being screened?) The screen didn't say anything about
 not using an AI agent, so I did, but I'd like to give a quick summary of that process
 to give insight on how it went, and the choices I made.
 
